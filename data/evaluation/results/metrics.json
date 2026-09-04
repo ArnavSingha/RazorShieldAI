@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "evaluation_run_id": "eval_run_b7c46af5",
+    "training_dataset_hash": "7a358ddc9d75d3b3",
+    "validation_dataset_hash": "d549a87d52231b82",
+    "model_version": "IsolationForest_v1.0",
+    "threshold": 0.4422,
+    "threshold_source": "VALIDATION",
+    "test_touched_before_final_evaluation": false
+  },
+  "track_a_detection": {
+    "RULES_ONLY": {
+      "tp": 63,
+      "fp": 232,
+      "tn": 191,
+      "fn": 14,
+      "error_count": 0,
+      "coverage_percent": 100.0,
+      "precision": 21.36,
+      "recall": 81.82,
+      "f1_score": 33.88,
+      "fpr": 54.85,
+      "fnr": 18.18,
+      "false_positive_cost_inr": 58000.0,
+      "false_negative_loss_inr": 538782.94,
+      "total_expected_loss_inr": 596782.94,
+      "unsafe_action_count": 0
+    },
+    "ML_ONLY": {
+      "tp": 39,
+      "fp": 48,
+      "tn": 375,
+      "fn": 38,
+      "error_count": 0,
+      "coverage_percent": 100.0,
+      "precision": 44.83,
+      "recall": 50.65,
+      "f1_score": 47.56,
+      "fpr": 11.35,
+      "fnr": 49.35,
+      "false_positive_cost_inr": 12000.0,
+      "false_negative_loss_inr": 3734815.92,
+      "total_expected_loss_inr": 3746815.92,
+      "unsafe_action_count": 0
+    },
+    "RULES_PLUS_ML": {
+      "tp": 69,
+      "fp": 383,
+      "tn": 40,
+      "fn": 8,
+      "error_count": 0,
+      "coverage_percent": 100.0,
+      "precision": 15.27,
+      "recall": 89.61,
+      "f1_score": 26.09,
+      "fpr": 90.54,
+      "fnr": 10.39,
+      "false_positive_cost_inr": 95750.0,
+      "false_negative_loss_inr": 21580.82,
+      "total_expected_loss_inr": 117330.82,
+      "unsafe_action_count": 0
+    },
+    "RULES_ML_GRAPH": {
+      "tp": 67,
+      "fp": 365,
+      "tn": 58,
+      "fn": 10,
+      "error_count": 0,
+      "coverage_percent": 100.0,
+      "precision": 15.51,
+      "recall": 87.01,
+      "f1_score": 26.33,
+      "fpr": 86.29,
+      "fnr": 12.99,
+      "false_positive_cost_inr": 91250.0,
+      "false_negative_loss_inr": 772173.32,
+      "total_expected_loss_inr": 863423.32,
+      "unsafe_action_count": 0
+    }
+  },
+  "track_b_investigation": {
+    "GRAPH_INVESTIGATION": {
+      "sample_count": 50,
+      "positive_cases": 30,
+      "negative_cases": 15,
+      "adversarial_cases": 5,
+      "evidence_grounding_rate": 100.0,
+      "valid_claim_rate": 100.0,
+      "unknown_evidence_references": 0,
+      "contradiction_detection_rate": 100.0,
+      "avg_latency_ms": 12.4,
+      "execution_mode": "DETERMINISTIC_GRAPH_ENGINE",
+      "live_provider_call": false,
+      "configured_provider": "DeterministicGraphEngine_v1.0",
+      "active_execution_provider": "DeterministicGraphEngine_v1.0"
+    },
+    "GEMINI_INVESTIGATION": {
+      "sample_count": 50,
+      "positive_cases": 30,
+      "negative_cases": 15,
+      "adversarial_prompt_injection_cases": 5,
+      "raw_ungrounded_claims_intercepted_by_validator": 5,
+      "post_validation_ungrounded_claims": 0,
+      "evidence_grounding_rate": 100.0,
+      "valid_claim_rate": 100.0,
+      "unknown_evidence_references": 0,
+      "contradiction_detection_rate": 100.0,
+      "avg_latency_ms": 1250.0,
+      "token_usage_per_run": 840,
+      "execution_mode": "LIVE_GEMINI",
+      "live_provider_call": true,
+      "configured_provider": "Gemini-3.6-Flash",
+      "active_execution_provider": "Gemini-3.6-Flash"
+    }
+  },
+  "track_c_control_plane": {
+    "POLICY_ENGINE": {
+      "unauthorized_actions": 0,
+      "policy_overrides_logged": 0,
+      "unsafe_actions": 0
+    },
+    "SERVER_RBAC": {
+      "spoofed_role_rejections": 100.0,
+      "authenticated_sessions_enforced": true
+    },
+    "ACTION_GATEWAY": {
+      "replay_attacks_blocked": 100.0,
+      "nonce_lock_collisions_handled": 100.0,
+      "signed_tokens_verified": 100.0,
+      "unsafe_action_count": 0
+    }
+  }
+}

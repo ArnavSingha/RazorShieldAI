@@ -1,0 +1,56 @@
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Static Analysis & Test Caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+pytest-cache-files-*/
+
+# Local Databases & Scratch Storage
+*.db
+*.sqlite
+*.sqlite3
+scratch/
+razorshield_local.db
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment Files
+.env
+.env.*
+!.env.example
+
+# Node / Frontend Build Artifacts
+node_modules/
+dist/
+build/
+playwright-report/
+test-results/
+
+# Archives & Large Binary Files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# IDE, OS & Tooling Internal Folders
+.antigravity/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
