@@ -58,15 +58,16 @@ docs/
 ---
 
 ## Document Cross-Link Index
-- Product Spec: [docs/product/PRODUCT_SPEC.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/product/PRODUCT_SPEC.md)
-- Architecture: [docs/architecture/ARCHITECTURE.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/architecture/ARCHITECTURE.md)
-- Failure Recovery: [docs/architecture/FAILURE_RECOVERY.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/architecture/FAILURE_RECOVERY.md)
-- Security Model: [docs/security/SECURITY_MODEL.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/security/SECURITY_MODEL.md)
-- Threat Model: [docs/threat-model/THREAT_MODEL.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/threat-model/THREAT_MODEL.md)
-- AI Safety: [docs/ai-safety/AI_SAFETY.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/ai-safety/AI_SAFETY.md)
-- Data Model: [docs/data-model/DATA_MODEL.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/data-model/DATA_MODEL.md)
-- API Contract: [docs/api/API_CONTRACT.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/api/API_CONTRACT.md)
-- Test Strategy: [docs/testing/TEST_STRATEGY.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/testing/TEST_STRATEGY.md)
-- Evaluation Plan: [docs/evaluation/EVALUATION_PLAN.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/evaluation/EVALUATION_PLAN.md)
-- UX Spec: [docs/product/UX_SPEC.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/product/UX_SPEC.md)
-- Review Checklist: [docs/review/REVIEW_CHECKLIST.md](file:///c:/Users/arnav/OneDrive/Desktop/Assingments/RazorShield%20AI/docs/review/REVIEW_CHECKLIST.md)
+- Product Spec: [PRODUCT_SPEC.md](product/PRODUCT_SPEC.md)
+- Architecture: [ARCHITECTURE.md](architecture/ARCHITECTURE.md)
+- Failure Recovery: [FAILURE_RECOVERY.md](architecture/FAILURE_RECOVERY.md)
+- Security Model: [SECURITY_MODEL.md](security/SECURITY_MODEL.md)
+- Threat Model: [THREAT_MODEL.md](threat-model/THREAT_MODEL.md)
+- AI Safety: [AI_SAFETY.md](ai-safety/AI_SAFETY.md)
+- Data Model: [DATA_MODEL.md](data-model/DATA_MODEL.md)
+- API Contract: [API_CONTRACT.md](api/API_CONTRACT.md)
+- Test Strategy: [TEST_STRATEGY.md](testing/TEST_STRATEGY.md)
+- Evaluation Plan: [EVALUATION_PLAN.md](evaluation/EVALUATION_PLAN.md)
+- UX Spec: [UX_SPEC.md](product/UX_SPEC.md)
+- Review Checklist: [REVIEW_CHECKLIST.md](review/REVIEW_CHECKLIST.md)
+
