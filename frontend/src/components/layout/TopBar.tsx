@@ -10,14 +10,16 @@ interface TopBarProps {
   systemStatus: SystemStatusData | null;
   onRefresh?: () => void;
   onOpenCommandPalette?: () => void;
+  onOpenPitchTeleprompter?: () => void;
 }
 
-export const TopBar: React.FC<TopBarProps> = ({ activeView, systemStatus, onRefresh, onOpenCommandPalette }) => {
+export const TopBar: React.FC<TopBarProps> = ({ activeView, systemStatus, onRefresh, onOpenCommandPalette, onOpenPitchTeleprompter }) => {
   const [timeStr, setTimeStr] = useState<string>('');
   const [connState, setConnState] = useState<ConnectionState>('CONNECTED');
   const [latencyMs, setLatencyMs] = useState<number>(124);
   const [showGuidedTour, setShowGuidedTour] = useState<boolean>(false);
   const { user, devSimRole, setDevSimRole } = useAuth();
+
 
   useEffect(() => {
     const updateClock = () => {
@@ -114,6 +116,18 @@ export const TopBar: React.FC<TopBarProps> = ({ activeView, systemStatus, onRefr
 
       {/* Right: User Identity, Dev Simulation Role & System Controls */}
       <div className="flex items-center gap-3">
+        {/* Pitch Teleprompter Mode Trigger (For Hackathon 5-Min Video Recording) */}
+        {onOpenPitchTeleprompter && (
+          <button
+            onClick={onOpenPitchTeleprompter}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-purple-600/30 to-indigo-600/30 hover:from-purple-600/40 hover:to-indigo-600/40 text-purple-300 border border-purple-500/50 font-bold transition-all shadow-sm shadow-purple-500/10 cursor-pointer animate-pulse-subtle"
+            title="Start Interactive 5-Minute Pitch Recording Teleprompter"
+          >
+            <span className="text-xs">🎬</span>
+            <span>Pitch Teleprompter</span>
+          </button>
+        )}
+
         {/* Guided Tour Trigger */}
         <button
           onClick={() => setShowGuidedTour(true)}
@@ -123,6 +137,7 @@ export const TopBar: React.FC<TopBarProps> = ({ activeView, systemStatus, onRefr
           <HelpCircle className="w-3.5 h-3.5 text-indigo-400" />
           <span>Guided Mode</span>
         </button>
+
 
         {/* User Identity & Dev Role Simulator */}
         <div className="flex items-center gap-2 bg-slate-950 px-3 py-1 rounded-lg border border-slate-800 shadow-inner">

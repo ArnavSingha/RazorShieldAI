@@ -23,11 +23,15 @@ import { getRecentTransactions } from '../services/investigations';
 import { TransactionDecision } from '../types/domain';
 
 import { AnalystWorkQueue } from '../components/work-queue/AnalystWorkQueue';
+import { PitchTeleprompterOverlay } from '../components/layout/PitchTeleprompterOverlay';
+
 
 function AppContent() {
   const [activeView, setActiveView] = useState<NavView>('command');
   const [commandPaletteOpen, setCommandPaletteOpen] = useState<boolean>(false);
+  const [pitchTeleprompterOpen, setPitchTeleprompterOpen] = useState<boolean>(false);
   const [selectedInvestigationId, setSelectedInvestigationId] = useState<string>('cust_default');
+
   const { systemStatus, refetch: refetchHealth } = useSystemHealth();
   const { incidents, refetch: refetchIncidents } = useIncidents();
 
@@ -94,6 +98,7 @@ function AppContent() {
             fetchRecent();
           }}
           onOpenCommandPalette={() => setCommandPaletteOpen(true)}
+          onOpenPitchTeleprompter={() => setPitchTeleprompterOpen(true)}
         />
 
         <main className="p-6 max-w-7xl w-full mx-auto space-y-6 flex-1">
@@ -182,7 +187,13 @@ function AppContent() {
         onClose={() => setCommandPaletteOpen(false)}
         onSelectView={setActiveView}
       />
+      <PitchTeleprompterOverlay
+        isOpen={pitchTeleprompterOpen}
+        onClose={() => setPitchTeleprompterOpen(false)}
+        onSelectView={setActiveView}
+      />
       <NotificationToast />
+
     </div>
   );
 }
